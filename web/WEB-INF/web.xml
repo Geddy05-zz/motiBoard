@@ -3,4 +3,27 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
+    <servlet>
+    <servlet-name>SystemServiceServlet</servlet-name>
+    <servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>
+    <init-param>
+    <param-name>services</param-name>
+    <param-value>motiBoard.spi.motiBoardApi</param-value>
+</init-param>
+</servlet>
+    <servlet-mapping>
+    <servlet-name>SystemServiceServlet</servlet-name>
+    <url-pattern>/_ah/spi/*</url-pattern>
+</servlet-mapping>
+
+    <!--<servlet>-->
+        <!--<servlet-name>simple</servlet-name>-->
+        <!--<servlet-class>motiBoard.spi.Simple</servlet-class>-->
+    <!--</servlet>-->
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>simple</servlet-name>-->
+        <!--<url-pattern>/home</url-pattern>-->
+        <!---->
+    <!--</servlet-mapping>-->
+
 </web-app>
